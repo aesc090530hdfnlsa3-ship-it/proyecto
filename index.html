@@ -1,10 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 3er parcial de Metodologias</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fffdfd;
+        }
+
+        header {
+            background: #0f7c4e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .titulo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .parrafo {
+            font-size: 18px;
+        }
+
+        .caja {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: rgb(185, 182, 182);
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-  <h1>¡Hola! Mi página funciona 🎉</h1>
+
+<header>
+    <h1>Página web del Proyecto</h1>
+</header>
+
+<section>
+    <div style="border: 10px solid rgb(6, 212, 116); padding: 20px;">
+        <h2 class="titulo">Proyecto 3er parcial</h2>
+        <p class="parrafo">
+            En esta página web se hablará de todo el conocimiento obtenido durante el primer parcial del Cecytem plantel Cuautitlán. Son 5 materias de las que se dará contexto a los temas y aprendizajes. Al final de cada materia habrá un examen de 20 preguntas de Química, Inglés y Implementa Software de Sistemas Informáticos.
+        </p>
+        <img src="logo.png" alt="Logo" />
+    </div>
+
+    <!-- Fecha, hora y visitas -->
+    <h2 id="fecha"></h2>
+    <h2 id="hora"></h2>
+    <h2 id="visitas"></h2>
+
+    <script>
+        function mostrarFecha() {
+            const fecha = new Date().toLocaleDateString("es-ES", {
+                weekday: "long", year: "numeric", month: "long", day: "numeric"
+            });
+            document.getElementById("fecha").textContent = "Fecha: " + fecha;
+        }
+
+        function mostrarHora() {
+            const hora = new Date().toLocaleTimeString("es-ES");
+            document.getElementById("hora").textContent = "Hora: " + hora;
+        }
+
+        function contadorVisitas() {
+            let visitas = localStorage.getItem("visitas");
+            visitas = visitas ? parseInt(visitas) + 1 : 1;
+            localStorage.setItem("visitas", visitas);
+            document.getElementById("visitas").textContent = "Número de visitas: " + visitas;
+        }
+
+        mostrarFecha();
+        mostrarHora();
+        setInterval(mostrarHora, 1000);
+        contadorVisitas();
+    </script>
+
+    <!-- Materias -->
+    <div style="border: 10px solid rgb(15, 171, 182); padding: 20px;">
+        <div class="caja">
+            <h4>Química</h4>
+            <p>
+                 La química es la ciencia que estudia la materia, su composición, estructura, propiedades y las transformaciones que experimenta, analizando átomos y moléculas y cómo interactúan para formar todo lo que nos rodea, desde los alimentos y medicamentos hasta los materiales tecnológicos, siendo fundamental para comprender el universo y la vida cotidiana. La química es la ciencia que estudia la materia, su composición, estructura, propiedades y las transformaciones que puede sufrir, así como la energía involucrada en esos cambios. Gracias a la química entendemos cómo funcionan las sustancias que nos rodean, desde el aire que respiramos hasta los medicamentos.
+            </p>
+            <img src="quimica1.png" alt="Química 1" />
+            <img src="quimica2.png" alt="Química 2" />
+            <img src="quimica3.png" alt="Química 3" />
+            <div class="caja">
+                <h4>Examen de Química:</h4>
+                <li><a href="Quimica.html">Ir al examen de Química</a></li>
+            </div>
+        </div>
+    </div>
+
+    <div style="border: 10px solid rgb(26, 55, 75); padding: 20px;">
+        <div class="caja">
+            <h4>Implementa Software de Sistemas Informáticos</h4>
+            <p>
+                Implementa Software de Sistemas Informáticos es una materia donde se aprende a diseñar, desarrollar, probar e implementar programas que permiten el correcto funcionamiento de los sistemas de cómputo, tanto a nivel de software como de uso del sistema operativo.
+Su objetivo principal es que el estudiante adquiera las habilidades básicas para crear software funcional, comprender cómo interactúa con el hardware y aplicar buenas prácticas en el desarrollo de programas.
+            </p>
+            <img src="implementa1.png" alt="Implementa 1" />
+            <img src="implementa2.png" alt="Implementa 2" />
+            <img src="implementa3.png" alt="Implementa 3" />
+            <div class="caja">
+                <h4>Examen de Implementa Software:</h4>
+                <li><a href="Implementa.html">Ir al examen de Implementa Software</a></li>
+            </div>
+        </div>
+    </div>
+
+    <div style="border: 10px solid rgb(235, 250, 21); padding: 20px;">
+        <div class="caja">
+            <h4>Inglés</h4>
+            <p>
+                La materia de Inglés tiene como objetivo desarrollar la capacidad de comunicación en una lengua extranjera. Se enfoca en que el estudiante pueda comprender, hablar, leer y escribir en inglés para situaciones cotidianas, académicas y básicas del ámbito laboral.
+            </p>
+            <img src="ingles1.png" alt="Inglés 1" />
+            <img src="ingles2.png" alt="Inglés 2" />
+            <img src="ingles3.png" alt="Inglés 3" />
+            <div class="caja">
+                <h4>Examen de Inglés:</h4>
+                <li><a href="Ingles.html">Ir al examen de Inglés</a></li>
+            </div>
+        </div>
+    </div>
+
+    <div style="border: 10px solid rgb(107, 148, 146); padding: 20px;">
+        <div class="caja">
+            <h4>Ciencias Sociales</h4>
+            <p>
+                Las ciencias sociales son un conjunto de disciplinas que estudian al ser humano en sociedad, es decir, cómo las personas se relacionan, se organizan, producen cultura, ejercen poder y construyen su vida colectiva.
+Su objetivo principal es comprender y explicar los fenómenos sociales, como el comportamiento humano, las instituciones, la economía, la política y la cultura.
+            </p>
+            <div class="caja">
+                <li><a href="CienciasSociales.html">Ir al contenido de Ciencias Sociales</a></li>
+            </div>
+        </div>
+    </div>
+
+    <div style="border: 10px solid rgb(20, 228, 217); padding: 20px;">
+        <div class="caja">
+            <h4>Lengua y Comunicación</h4>
+            <p>
+                Lengua y Comunicación es un área de estudio que se enfoca en cómo las personas usan el lenguaje para comunicarse, expresar ideas, sentimientos y transmitir información.
+            </p>
+            <div class="caja">
+                <li><a href="LenguayComunicacion.html">Ir al contenido de Lengua y Comunicación</a></li>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2025 - Proyecto 3er parcial
+</footer>
+
 </body>
 </html>
