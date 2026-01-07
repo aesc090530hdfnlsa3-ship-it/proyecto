@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto 3er parcial de Metodologias</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fffdfd;
+        }
+
+        header {
+            background: #0f7c4e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .titulo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .parrafo {
+            font-size: 18px;
+        }
+
+        .caja {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: rgb(185, 182, 182);
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Página web del Proyecto</h1>
+    </header>
+     <div style="border: 10px solid rgb(6, 212, 116); padding: 20px;">
+    <section>
+        <h2 class="titulo">Proyecto 3er parcial</h2>
+        <p class="parrafo">En esta pagina web se estara hablando de todo el conocimiento que se obtuvo durante el primer parcial del Cecytem plantel Cuautitlan, son 5 materias de las que hablare dando contexto a los temas que me dieron y mis aprendizajes, al final del resumen de cada una de las materias se estara realizando un examen de 20 preguntas de Quimica, Ingles y Implementa Software de Sistemas Informaticos.</p>
+        <img src="logo.png"
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página con fecha, hora y visitas</title>
+</head>
+<body>
+
+<h2 id="fecha"></h2>
+<h2 id="hora"></h2>
+<h2 id="visitas"></h2>
+
+<script>
+// ---- FECHA ----
+function mostrarFecha() {
+    const fecha = new Date().toLocaleDateString("es-ES", {
+        weekday: "long", year: "numeric", month: "long", day: "numeric"
+    });
+    document.getElementById("fecha").textContent = "Fecha: " + fecha;
+}
+
+// ---- HORA ----
+function mostrarHora() {
+    const hora = new Date().toLocaleTimeString("es-ES");
+    document.getElementById("hora").textContent = "Hora: " + hora;
+}
+
+// ---- CONTADOR DE VISITAS (local) ----
+function contadorVisitas() {
+    let visitas = localStorage.getItem("visitas");
+
+    if (!visitas) {
+        visitas = 1;
+    } else {
+        visitas = parseInt(visitas) + 1;
+    }
+
+    localStorage.setItem("visitas", visitas);
+    document.getElementById("visitas").textContent = "Número de visitas: " + visitas;
+}
+
+
+mostrarFecha();
+mostrarHora();
+setInterval(mostrarHora, 1000); // Actualizar cada segundo
+contadorVisitas();
+</script>
+
+</body>
+</html>
+<div class="caja">
+    <h4>A continuacion hablare sobre 5 materias del 1er Semestre</h4>
+</div>
+</div>
+     <div style="border: 10px solid rgb(15, 171, 182); padding: 20px;">
+        
+<div class="caja">
+    <h4>Quimica</h4>
+<div class="caja">
+    <h4>La química es la ciencia que estudia la materia, su composición, estructura, propiedades y las transformaciones que experimenta, analizando átomos y moléculas y cómo interactúan para formar todo lo que nos rodea, desde los alimentos y medicamentos hasta los materiales tecnológicos, siendo fundamental para comprender el universo y la vida cotidiana. La química es la ciencia que estudia la materia, su composición, estructura, propiedades y las transformaciones que puede sufrir, así como la energía involucrada en esos cambios. Gracias a la química entendemos cómo funcionan las sustancias que nos rodean, desde el aire que respiramos hasta los medicamentos. </h4>
+</div>
+<div class="caja">
+    <h4>A qui hay 3 ejemplos de 3 temas diferentes de quimica del 1er Semestre:</h4>
+<img src="quimica1.png">
+<img src="quimica2.png">
+<img src="quimica3.png">
+<div class="caja">
+    <h4>A continuacion hay un formulario de 20 preguntas de quimica:</h4>
+        <div class="caja">
+            <li><a href="Quimica.html"><Quimica.html</a></li>
+            <p>Quimica</p>
+        </div>
+        </div>
+</div>
+</div>
+</div> 
+    
+<div style="border: 10px solid rgb(26, 55, 75); padding: 20px;">
+        
+<div class="caja">
+    <h4>Implementa Software de Sistemas Informaticos</h4>
+<div class="caja">
+    <h4>Implementa Software de Sistemas Informáticos es una materia donde se aprende a diseñar, desarrollar, probar e implementar programas que permiten el correcto funcionamiento de los sistemas de cómputo, tanto a nivel de software como de uso del sistema operativo.
+Su objetivo principal es que el estudiante adquiera las habilidades básicas para crear software funcional, comprender cómo interactúa con el hardware y aplicar buenas prácticas en el desarrollo de programas. </h4>
+</div>
+<div class="caja">
+    <h4>A qui hay 3 ejemplos de 3 temas diferentes de Implementa Software de Sistemas Informaticos del 1er Semestre:</h4>
+<img src="implementa1.png">
+<img src="implementa2.png">
+<img src="implementa3.png">
+<div class="caja">
+    <h4>A continuacion hay un formulario de 20 preguntas de Implementa Software de Sistemas Informaticos:</h4>
+    <div class="caja">
+    <h4>Presione SOLO este apartado para contestar el examen</h4>
+    <img src="flecha.png"
+        <div class="caja">
+            <li><a href="Implementa.html"><Implementa.html</a></li>
+            <p>Implementa Software de Sistemas Informaticos</p>
+        </div>
+        </div>
+</div>
+</div>
+</div> 
+
+
+<div style="border: 10px solid rgb(235, 250, 21); padding: 20px;">
+        
+<div class="caja">
+    <h4>Ingles</h4>
+<div class="caja">
+    <h4>La materia de Inglés tiene como objetivo desarrollar la capacidad de comunicación en una lengua extranjera. Se enfoca en que el estudiante pueda comprender, hablar, leer y escribir en inglés para situaciones cotidianas, académicas y básicas del ámbito laboral. </h4>
+</div>
+<div class="caja">
+    <h4>A qui hay 3 ejemplos de 3 temas diferentes de Ingles:</h4>
+<img src="ingles1.png">
+<img src="ingles2.png">
+<img src="ingles3.png">
+<div class="caja">
+    <h4>A continuacion hay un formulario de 20 preguntas de Ingles:</h4>
+        <div class="caja">
+            <div class="caja">
+    <h4>Presione SOLO este apartado para contestar el examen</h4>
+    <img src="flecha.png"
+            <li><a href="Ingles.html"><Ingles.html</a></li>
+            <p>Ingles</p>
+        </div>
+        </div>
+</div>
+</div>
+</div>
+</div> 
+
+
+<div style="border: 10px solid rgb(107, 148, 146); padding: 20px;">
+        
+<div class="caja">
+    <h4>Ciencias Sociales</h4>
+<div class="caja">
+    <h4>Las ciencias sociales son un conjunto de disciplinas que estudian al ser humano en sociedad, es decir, cómo las personas se relacionan, se organizan, producen cultura, ejercen poder y construyen su vida colectiva.
+Su objetivo principal es comprender y explicar los fenómenos sociales, como el comportamiento humano, las instituciones, la economía, la política y la cultura. </h4>
+</div>
+        <div class="caja">
+            <div class="caja">
+    <h4>Presione SOLO este apartado para contenido con imagenes.</h4>
+    <img src="flecha.png"
+            <li><a href="CienciasSociales.html"><CienciasSociales.html</a></li>
+            <p>Ciencias Sociales</p>
+        </div>
+        </div>
+</div>
+</div>
+</div>
+</div> 
+
+
+<div style="border: 10px solid rgb(20, 228, 217); padding: 20px;">
+        
+<div class="caja">
+    <h4>Lengua y Comunicacion.</h4>
+<div class="caja">
+    <h4>Lengua y Comunicación es un área de estudio que se enfoca en cómo las personas usan el lenguaje para comunicarse, expresar ideas, sentimientos y transmitir información. </h4>
+</div>
+        <div class="caja">
+            <div class="caja">
+    <h4>Presione SOLO este apartado para contenido con imagenes.</h4>
+    <img src="flecha.png"
+            <li><a href="LenguayComunicacion.html"><LenguayComunicacion.html</a></li>
+            <p>Lengua y Comunicacion</p>
+        </div>
+        </div>
+</div>
+</div>
+</div>
+</div> 
+
+        
+        
+    </section>
+    <footer>
+        © 2025 - Proyecto 3er parcial
+    </footer>
+</body>
+</html>
